@@ -1,0 +1,80 @@
+// & = .class
+// $ = переменная
+// @mixin (параметры в переменно) @include(вставить переменную)
+
+
+@import "normalizes.scss" 
+@import "resets.scss"
+
+$color-blue: #5290EA
+$color-orange: #F28B64
+$color-grey: #E2E2E2
+
+*
+    box-sizing: border-box
+
+.conteiner
+    max-width: 1140px
+    margin: 0 auto
+
+.main-section
+    height: 800px
+    background-color: #f0f0f0
+    padding-top: 16px 
+    &__nav-conteiner
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        height: 69px
+        align-items: center
+    &__logo
+        width: 134px
+
+.nav-menu
+    &__list
+        display: flex
+        flex-direction: row
+    &__list-item
+        margin-right: 64px
+        font-size: 18px
+        &:last-child
+            margin-right: 0px
+    
+.left-wrapper
+    position: relative
+    img
+        position: relative
+        z-index: 5
+    &__rectangle-blue
+        z-index: 2
+        position: absolute
+        top: 150px
+        left: -50px
+        transform: rotate(-64deg)
+        width: 565.95px
+        height: 220px
+        background-color: $color-blue
+        border-radius: 100px
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    &__rectangle-orange
+        z-index: 3
+        position: absolute
+        top: 160px
+        left: -30px
+        transform: rotate(-50.81deg)
+        width: 618.43px
+        height: 220px
+        background-color: $color-orange
+        border-radius: 100px
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    &__rectangle-grey
+        z-index: 1
+        position: absolute
+        top: 190px
+        left: 10px
+        transform: rotate(-36.15deg)
+        width: 608.97px
+        height: 220px
+        background-color: $color-grey
+        border-radius: 100px
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
